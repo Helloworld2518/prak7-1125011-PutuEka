@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 import minggu.Controller.Controller;
 import minggu.Model.UserModel;
 
-public class Login {
+public class View {
     public static void main(String[] args) {
         String appName = "Praktikum Minggu 7";
         int width = 600;
