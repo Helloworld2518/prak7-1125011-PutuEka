@@ -36,12 +36,14 @@ public class View {
         JPasswordField password = new JPasswordField();
 
         JButton login = new JButton("Login");
+        JButton regButton = new JButton("Register");
 
         panelLogin.add(usernameText);
         panelLogin.add(userInput);
         panelLogin.add(passwordText);
         panelLogin.add(password);
         panelLogin.add(login);
+        panelLogin.add(regButton);
 
         JPanel panelRegister = new JPanel(new GridLayout(3, 2, 5, 5));
 
@@ -62,7 +64,11 @@ public class View {
         frame.add(panelLogin, "Login");
         frame.add(panelRegister, "Register");
 
-        card.show(frame.getContentPane(), "Register");
+        card.show(frame.getContentPane(), "Login");
+
+        regButton.addActionListener(e -> {
+            card.show(frame.getContentPane(), "Register");
+        });
 
         register.addActionListener(e -> {
             String username = userRegis.getText();
